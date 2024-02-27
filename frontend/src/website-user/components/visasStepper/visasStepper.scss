@@ -1,0 +1,214 @@
+@import '../../styles/variables.scss';
+@import '../../styles/responsive.scss';
+
+.visas-stepper-section {
+
+  .offers-container {
+    overflow: hidden;
+    width: 100%;
+
+    .offers {
+      display: flex;
+      margin-bottom: 40px;
+      animation: tickerh linear 20s infinite;
+
+      @include smd {
+        animation: tickerh linear 15s infinite;
+      }
+
+      &:hover {
+        /* Pause animation on hover */
+        animation-play-state: paused;
+      }
+
+      .offer {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        flex-shrink: 0;
+
+        img {
+          width: 1232px;
+          height: 200px;
+
+          @include xl {
+            width: 1000px;
+          }
+
+          @include lg {
+            width: 760px;
+          }
+
+          @include md {
+            width: 99%;
+          }
+        }
+
+        .description {
+          margin-right: 10px;
+
+          h3 {
+            font-size: 16px;
+            line-height: 18px;
+            font-weight: 400;
+          }
+
+          p {
+            font-size: 13px;
+            line-height: 18px;
+            font-weight: 400;
+            color: #787878;
+          }
+        }
+      }
+    }
+
+    @keyframes tickerh {
+      0% {
+        transform: translateX(-100%);
+      }
+
+      100% {
+        transform: translateX(400%);
+      }
+    }
+  }
+
+  .visas-stepper {
+    background-color: $light-color;
+    border-radius: 20px;
+    padding: 56px 24px 40px 24px;
+    box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.3);
+    margin: auto 100px;
+
+    @include lg {
+      right: 20px;
+      left: 20px;
+      padding: 56px 30px;
+      margin: auto 5px;
+    }
+
+    @include sm {
+      box-shadow: none;
+      padding: 0;
+    }
+
+    .steps-container {
+      position: relative;
+      max-width: 520px;
+      margin: auto;
+      margin-bottom: 40px;
+
+      @include md {
+        max-width: 400px;
+      }
+
+      @include smd {
+        max-width: 220px;
+      }
+    }
+
+    .progress-line1 {
+      position: absolute;
+      height: 6px;
+      background-color: #EFF0F6;
+      width: 98px;
+      top: 40%;
+      right: 50px;
+      z-index: -1;
+      transition: all 0.25s ease;
+      border-radius: 40px;
+      z-index: 111;
+
+      @include md {
+        right: 40px;
+        width: 77px;
+      }
+
+      @include smd {
+        right: 26px;
+        width: 35px;
+      }
+    }
+
+    .progress-line2 {
+      position: absolute;
+      height: 6px;
+      background-color: #EFF0F6;
+      width: 98px;
+      top: 40%;
+      left: 211px;
+      z-index: -1;
+      transition: all 0.25s ease;
+      border-radius: 40px;
+      z-index: 111;
+
+      @include md {
+        left: 160px;
+        width: 77px;
+      }
+
+      @include smd {
+        right: 92px;
+        width: 35px;
+      }
+    }
+
+    .progress-line3 {
+      position: absolute;
+      height: 6px;
+      background-color: #EFF0F6;
+      width: 98px;
+      top: 40%;
+      left: 48px;
+      z-index: -1;
+      transition: all 0.25s ease;
+      border-radius: 40px;
+      z-index: 111;
+
+      @include md {
+        left: 40px;
+        width: 75px;
+      }
+
+      @include smd {
+        left: 25px;
+        width: 35px;
+      }
+    }
+
+    .progress-line1.proActive,
+    .progress-line2.proActive,
+    .progress-line3.proActive {
+      background-color: $yellow-color;
+      z-index: 111;
+    }
+
+    .steps-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .steps {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background-color: #EFF0F6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+      cursor: pointer;
+
+      @include smd {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    .steps.active {
+      background-color: $yellow-color;
+    }
+  }
+}

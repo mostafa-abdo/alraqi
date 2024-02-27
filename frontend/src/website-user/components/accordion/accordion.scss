@@ -1,0 +1,113 @@
+@import '../../styles/variables.scss';
+@import '../../styles/responsive.scss';
+
+.accordion {
+  max-width: 1125px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  background-color: transparent;
+  gap: 30px;
+  margin: auto;
+
+  @include xl {
+    grid-template-columns: repeat(auto-fill, minmax(470px, 1fr));
+    gap: 10px;
+    padding: 10px;
+  }
+
+  @include lg {
+    grid-template-columns: auto;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  .title {
+    padding: 30px 30px 30px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $light-color;
+    color: $main-color;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2000;
+    border-radius: 10px;
+    transition: all .2s ease-in;
+    box-shadow: 2px 2px 12px #bdbdbd, -2px -2px 12px #ffffff;
+
+    @include xl {
+      padding: 20px 20px 20px 20px;
+    }
+
+  }
+
+  .active {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .title-text {
+    line-height: 26px;
+    font-weight: 700;
+    font-size: 18px;
+
+    @include xl {
+      font-weight: 600;
+    }
+
+    @include md {
+      font-weight: 500;
+    }
+
+    @include sm {
+      font-weight: 400;
+      font-size: 16;
+    }
+  }
+
+  .content {
+    height: 30px;
+    background-color: $light-color;
+    border-radius: 0 0 10px 10px;
+    color: #637381;
+    font-size: 16px;
+    text-align: right;
+    position: relative;
+    z-index: 1000;
+    margin-top: -30px;
+    padding: 0 15px 0 9rem;
+    text-align: right;
+    box-shadow: 2px 2px 12px #bdbdbd, -2px -2px 12px #ffffff;
+    transition: all 200ms cubic-bezier(0.600, -0.280, 0.735, 0.045);
+  }
+
+  .content-open {
+    margin-top: 0px;
+    height: fit-content;
+    background-color: $light-color;
+    transition: all 350ms cubic-bezier(0.080, 1.090, 0.320, 1.275);
+  }
+
+  .content-text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: right;
+    padding: 15px;
+    visibility: hidden;
+    opacity: 0;
+    overflow: auto;
+    transition: all .2s ease-in;
+
+    @include md {
+      padding: 5px;
+    }
+  }
+
+  .content-text-open {
+    visibility: visible;
+    opacity: 1;
+    transition: all .8s ease-in;
+  }
+}

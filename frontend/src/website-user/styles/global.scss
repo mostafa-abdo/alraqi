@@ -1,0 +1,207 @@
+@import './variables.scss';
+@import './responsive.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Tajawal', sans-serif;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn {
+  padding: 8px;
+  border-radius: 9px;
+  display: inline-block;
+  color: $light-color;
+  background-color: $yellow-color;
+}
+
+.carousel_section {
+  background-color: #FCFAF5;
+  height: fit-content;
+  padding-top: 64px;
+  padding-bottom: 64px;
+
+  .carousel {
+    overflow-x: scroll;
+    margin: 50px auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .inner-carousel {
+      display: flex;
+      width: fit-content;
+      margin: 0 auto;
+    }
+
+    .item {
+      @include sm {
+        width: 273px;
+      }
+
+      img {
+        width: 352px;
+        height: 202px;
+        pointer-events: none;
+
+        @include sm {
+          width: 100%;
+        }
+      }
+
+      p {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 26.4px;
+        text-align: center;
+      }
+    }
+  }
+
+  .icons {
+    text-align: center;
+
+    .icon {
+      border-radius: 100%;
+      background-color: $light-color;
+      cursor: pointer;
+      padding: 10px;
+
+      &:hover {
+        background-color: $yellow-color;
+        color: $light-color;
+      }
+    }
+
+    .next {
+      margin-left: 32px;
+    }
+
+    .next,
+    .prev {
+      @include sm {
+        width: 36px;
+        height: 36px;
+      }
+    }
+  }
+}
+
+/* start partner hero */
+.partner_hero {
+  width: 100%;
+  min-height: 640px;
+  background-image: url('/partner-hero.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+
+  @include smd {
+    background-image:
+    linear-gradient( to top, rgba(158, 153, 153, 0.2), rgba(0, 0, 0, 0.8)),
+    url('/bg-mobile.jpg'); 
+  }
+
+  .hero_content {
+    display: flex;
+    justify-content: space-between;
+    color: $light-color;
+    width: 85.5%;
+    margin: auto;
+    height: fit-content;
+
+    @include md {
+      width: 95%;
+    }
+
+    @include smd {
+      width: 90%;
+      flex-direction: column;
+      margin-top: 150px;
+      margin-bottom: 200px;
+      gap: 50px;
+    }
+
+    .right_div {
+      max-width: 358px;
+
+      h1 {
+        font-size: 36px;
+        line-height: 43px;
+        font-weight: 700;
+
+        @include md {
+          font-size: 30px;
+          line-height: 40px;
+        }
+      }
+
+      p {
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 500;
+        margin-top: 20px;
+        margin-bottom: 24px;
+      }
+
+      .btn {
+        width: 182px;
+        height: 60px;
+        border-radius: 9;
+        padding: 8px;
+        font-size: 16px;
+        line-height: 19px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: $light-color;
+
+        @include sm {
+          width: 170px;
+          height: 52px;
+        }
+      }
+    }
+
+    .left_div {
+      max-width: 363px;
+
+      div {
+        &:not(:last-child) {
+          margin-bottom: 32px;
+        }
+
+        h2 {
+          font-size: 24px;
+          line-height: 28px;
+          font-weight: 700;
+          color: $light-color;
+        }
+
+        p {
+          font-size: 16px;
+          line-height: 19px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+/* end partner hero */

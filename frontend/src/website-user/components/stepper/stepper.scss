@@ -1,0 +1,57 @@
+@import '../../styles/variables.scss';
+
+.steps-container {
+  position: relative;
+  max-width: 362px;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+.progress-line1 {
+  position: absolute;
+  height: 6px;
+  background-color: #EFF0F6;
+  width: 98px;
+  top: 50%;
+  right: 46px;
+  z-index: -1;
+  transition: all 0.25s ease;
+  border-radius: 40px;
+}
+.progress-line2 {
+  position: absolute;
+  height: 6px;
+  background-color: #EFF0F6;
+  width: 98px;
+  top: 50%;
+  left: 46px;
+  z-index: -1;
+  transition: all 0.25s ease;
+  border-radius: 40px;
+}
+
+.progress-line1.proActive, .progress-line2.proActive {
+  background-color: $yellow-color;
+}
+
+.steps-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.steps {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: #EFF0F6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.steps.active {
+  background-color: $yellow-color;
+}

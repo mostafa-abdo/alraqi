@@ -1,0 +1,43 @@
+@import '../../styles/responsive.scss';
+
+.loyalty-rewards {
+
+  .container {
+    max-width: 1265px;
+    margin: 94px auto 222px auto;
+    padding: 0px 40px;
+
+    @include lg {
+      margin-top: 150px;
+    }
+
+    h1 {
+      font-size: 36px;
+      line-height: 46px; 
+      font-weight: 700; 
+      color: #BBA664;
+      text-align: right;
+      margin-bottom: 40px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 24px; 
+      font-weight: 500; 
+      color: #718096;
+      text-align: right;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+
+      span {
+        font-size: 24px;
+        line-height: 24px; 
+        font-weight: 700; 
+        color: #BBA664;
+        margin-left: 10px;
+      }
+    }
+  }
+}

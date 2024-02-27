@@ -1,0 +1,266 @@
+//global.scss
+@import './variables.scss';
+@import './responsive.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+body {
+  font-family: 'Tajawal', sans-serif;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.nav-header {
+  padding: 22px 24px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #45464E;
+  background-color: $white-color;
+
+  @include lg {
+    font-size: 20px;
+  }
+}
+
+.dashboard-main {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-height: 100%;
+
+  .sideNavContainer {
+    width: 16%;
+    min-height: 100%;
+
+    @include lg {
+      width: fit-content;
+    }
+  }
+
+  .contentContainer {
+    flex: 1;
+    width: 80%;
+    background-color: $light-gray;
+    min-height: 100%;
+  }
+}
+
+// filter form 
+.modal {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: $white-color;
+  position: absolute;
+  left: 50px;
+  top: -5px;
+  z-index: 10000;
+  box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.5);
+
+  .close {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  h1 {
+    position: absolute;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #1C1D22;
+    top: 15px;
+    right: 15px;
+  }
+
+  form {
+    margin-top: 40px;
+    display: flex;
+    max-width: 317px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-top: 3px solid $light-gray;
+    padding-top: 10px;
+
+
+    button {
+      width: 275px;
+      padding: 10px;
+      cursor: pointer;
+      background-color: $yellow-color;
+      color: $white-color;
+      border-radius: 10px;
+      border: 0;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 16px;
+
+      @include sm {
+        width: 250px;
+      }
+    }
+  }
+}
+
+// start dropdown input
+.filter-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 20px;
+
+  .input {
+    label {
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: 500;
+    }
+
+
+    .step-dropdown {
+      width: 133px;
+      padding: 13px 12px 11px 13px;
+      border-radius: 10px;
+      border: none;
+      background-color: #F4F6F9;
+      text-align: right;
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: 400;
+      height: 40px;
+      position: relative;
+      color: #9094A0;
+      user-select: none;
+      margin-top: 10px;
+
+      @include sm {
+        width: 250px;
+      }
+
+      .dropdown-btn {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #9094A0;
+        cursor: pointer;
+      }
+
+      .dropdown-content {
+        position: absolute;
+        top: 100%;
+        padding: 10px;
+        background-color: #fff;
+        font-size: 14px;
+        line-height: 16.8px;
+        font-weight: 500;
+        color: #000;
+        width: 99%;
+        right: 0;
+        z-index: 10;
+        height: 100px;
+        overflow-y: scroll;
+        box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.5);
+      }
+
+      .dropdown-item {
+        padding: 10px;
+        cursor: pointer;
+        transition: all 0.2s;
+
+        &:hover {
+          background-color: #F4F6F9;
+        }
+      }
+    }
+  }
+}
+//end dropdown input
+
+
+label.checkbox-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+  padding-right: 30px;
+  margin-bottom: 0px;
+  cursor: pointer;
+  font-size: clamp(14px, 1.5vw, 16px);
+  text-align: left;
+  font-weight: 400;
+  gap: 0px;
+  width: max-content;
+  max-width: 100%;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.checkbox-container input[type="radio"], .checkbox-container input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  top: 0;
+  height: unset;
+}
+
+.checkbox-container input.style{
+  border: 1px solid #000;
+}
+
+.checkmark {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border: 2px solid #00000022;
+}
+
+.checkbox-container:hover .checkmark {
+  background-color: #ccc;
+}
+
+.checkbox-container input:checked~.checkmark {
+  background-color: $yellow-color;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-container input:checked~.checkmark:after {
+  display: block;
+}
+
+.checkbox-container .checkmark:after {
+  left: 6px;
+  top: 1px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}

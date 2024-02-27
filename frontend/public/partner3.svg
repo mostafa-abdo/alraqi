@@ -1,0 +1,23 @@
+<svg width="44" height="30" viewBox="0 0 44 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect width="44" height="30" fill="url(#pattern0)"/>
+<g clip-path="url(#clip0_1495_2773)">
+<g clip-path="url(#clip1_1495_2773)">
+<path d="M40 0.5H4C3.17157 0.5 2.5 1.17157 2.5 2V28C2.5 28.8284 3.17157 29.5 4 29.5H40C40.8284 29.5 41.5 28.8284 41.5 28V2C41.5 1.17157 40.8284 0.5 40 0.5Z" fill="white" stroke="#D9D9D9"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M22.3942 20.3281C21.1874 21.3706 19.622 21.9999 17.9115 21.9999C14.0944 21.9999 11 18.8659 11 15C11 11.134 14.0944 8 17.9115 8C19.622 8 21.1874 8.6293 22.3942 9.67177C23.601 8.6293 25.1664 8 26.8769 8C30.694 8 33.7884 11.134 33.7884 15C33.7884 18.8659 30.694 21.9999 26.8769 21.9999C25.1664 21.9999 23.601 21.3706 22.3942 20.3281Z" fill="#ED0006"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M22.3945 20.3281C23.8809 19.0442 24.8234 17.1336 24.8234 15C24.8234 12.8664 23.8809 10.9557 22.3945 9.67177C23.6014 8.6293 25.1667 8 26.8772 8C30.6943 8 33.7887 11.134 33.7887 15C33.7887 18.8659 30.6943 21.9999 26.8772 21.9999C25.1667 21.9999 23.6014 21.3706 22.3945 20.3281Z" fill="#F9A000"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M22.3976 20.3283C23.8839 19.0444 24.8264 17.1337 24.8264 15.0001C24.8264 12.8665 23.8839 10.9558 22.3976 9.67188C20.9112 10.9558 19.9688 12.8665 19.9688 15.0001C19.9688 17.1337 20.9112 19.0444 22.3976 20.3283Z" fill="#FF5E00"/>
+</g>
+</g>
+<defs>
+<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_1495_2773" transform="scale(0.25 0.2)"/>
+</pattern>
+<clipPath id="clip0_1495_2773">
+<rect width="44" height="30" fill="white"/>
+</clipPath>
+<clipPath id="clip1_1495_2773">
+<rect width="40" height="30" fill="white" transform="translate(2)"/>
+</clipPath>
+<image id="image0_1495_2773" width="4" height="5" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAFCAQAAADIpIVQAAAADklEQVR42mNkgAJGIhgAALQABsHyMOcAAAAASUVORK5CYII="/>
+</defs>
+</svg>

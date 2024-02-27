@@ -1,0 +1,291 @@
+@import '../../styles/variables.scss';
+@import '../../styles/responsive.scss';
+
+.book-package {
+
+  .container {
+    max-width: 754px;
+    margin: 56px auto;
+
+    .info_div {
+      width: 100%;
+      padding: 45px 25px;
+      border-radius: 20px;
+      background: #ffffff;
+      box-shadow: 0px 0px 8px rgba($color: #000000, $alpha: 0.2);
+
+      @include sm {
+        padding: 45px 10px;
+      }
+
+      &:nth-child(2) {
+        box-shadow: 0 0 0;
+      }
+
+      h3 {
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 700;
+        margin-bottom: 32px;
+        color: #1A202C;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+
+    .customer_info {
+
+      .inputs {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(333px, 1fr));
+        gap: 22px;
+
+        .input {
+          @include sm {
+            width: 270px !important;
+          }
+
+          input {
+            &::placeholder {
+              color: #9094A0;
+            }
+          }
+        }
+
+        // number input
+        .react-tel-input .form-control {
+          margin-right: 75px;
+          height: 52px;
+          width: 260px;
+          padding: 0;
+          text-align: right;
+          border: none;
+          border-radius: 8px;
+          padding-right: 16px;
+          background-color: #F4F6F9;
+        }
+
+        .react-tel-input .flag-dropdown {
+          border: none;
+          border-radius: 8px;
+          background-color: #F4F6F9;
+        }
+
+        .react-tel-input .selected-flag {
+          width: 60px;
+          border: none;
+          border-radius: 8px;
+          background-color: #F4F6F9;
+        }
+
+        .react-tel-input .selected-flag .flag {
+          right: 10px;
+        }
+
+        .react-tel-input .selected-flag .arrow {
+          left: -30px;
+        }
+
+        // end number input
+
+        // start input search
+        .dropdown-box {
+          @include sm {
+            width: 270px;
+          }
+
+          .title {
+            font-size: 15px;
+            line-height: 18px;
+            font-weight: 700;
+            color: #010101;
+
+            span {
+              font-size: 24px;
+              line-height: 28px;
+              font-weight: 700;
+              color: #C9B979;
+            }
+          }
+
+          .input-dropdown {
+            max-width: 333px;
+            height: 52px;
+            background-color: #F4F6F9;
+            border-radius: 10px;
+            margin-top: 10px;
+
+            @include sm {
+              width: 270px !important;
+            }
+
+            .select-input {
+              width: 333px;
+              background-color: #F4F6F9;
+              border: none;
+              padding: 0px 20px 0px 10px;
+              border-radius: 10px;
+              height: 52px;
+              outline: 0 !important;
+              box-shadow: 0 0 0 !important;
+
+              @include sm {
+                width: 100% !important;
+              }
+
+              span {
+                margin-top: 10px;
+              }
+              
+              input {
+                width: 100%;
+                font-size: 13px;
+              }
+            }
+          }
+        }
+
+        //end dropdown search
+      }
+    }
+
+    #date-input {
+      width: 333px;
+    }
+
+
+    .payment_options {
+      box-shadow: 0 0 0;
+      padding: 0;
+
+      .options {
+        width: 100%;
+        gap: 14px;
+        display: flex;
+        align-items: center;
+
+        .option {
+          position: relative;
+          width: 241px;
+          height: 105px;
+          padding: 16px;
+          border-radius: 12px;
+          box-shadow: 0px 0px 8px rgba($color: #000000, $alpha: 0.2);
+          text-align: center;
+          cursor: pointer;
+
+          h4 {
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: 500;
+            color: #1A202C;
+            padding-bottom: 15px;
+            border-bottom: 1.5px solid #DDDFE1;
+          }
+
+          p {
+            padding-top: 16px;
+            font-size: 14px;
+            line-height: 21px;
+            font-weight: 400;
+            color: $yellow-color;
+          }
+
+          .question_mark {
+            position: absolute;
+            bottom: -5px;
+            left: -5px;
+          }
+        }
+      }
+    }
+
+    .payment_info {
+
+      div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h4 {
+          font-size: 18px;
+          line-height: 27px;
+          font-weight: 700;
+          color: $yellow-color;
+        }
+
+        p {
+          font-size: 24px;
+          line-height: 36px;
+          font-weight: 700;
+          color: $yellow-color;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 8px;
+
+          h4 {
+            font-size: 18px;
+            line-height: 27px;
+            font-weight: 500;
+            color: #1A202C;
+          }
+
+          p {
+            font-size: 24px;
+            line-height: 36px;
+            font-weight: 500;
+            color: #9094A0;
+          }
+        }
+      }
+    }
+
+    .card_info {
+      position: relative;
+
+      .title {
+        display: flex;
+        justify-content: space-between;
+
+        .cards {
+          img {
+            &:not(:last-child) {
+              margin-left: 12px;
+            }
+          }
+        }
+      }
+
+      .inputs {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(338px, 1fr));
+        gap: 22px;
+
+        #date-input {
+          width: 338px;
+        }
+      }
+
+      .pay_btn {
+        width: 153px;
+        height: 52px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 32px;
+        cursor: pointer;
+      }
+    }
+
+    .book-btn {
+      width: 153px;
+      padding: 13px 0;
+      font-size: 14px;
+      line-height: 24px;
+      font-weight: 700;
+    }
+  }
+}

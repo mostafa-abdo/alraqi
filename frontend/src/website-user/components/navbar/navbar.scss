@@ -1,0 +1,191 @@
+@import '../../styles/variables.scss';
+@import '../../styles/responsive.scss';
+
+.navbar {
+  width: 100%;
+  padding: 20px 96px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+
+  .overlay-open {
+    color: $yellow-color;
+    position: absolute;
+    font-size: 35px;
+    cursor: pointer;
+    top: 24px;
+    right: 20px;
+    z-index: 1;
+  }
+
+  @include xl {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  @include lg {
+    padding: 0;
+    height: 0;
+    width: 0px;
+  }
+
+  .navbar-smallscreen {
+    display: none;
+    width: 100%;
+
+    @include lg {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .logo {
+    color: $yellow-color;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28.8px;
+    text-decoration: none;
+
+    @include xl {
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 27px;
+    }
+  }
+
+  .links {
+    display: flex;
+    align-items: center;
+
+    .link {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 19.2px;
+      text-decoration: none;
+      color: $main-color;
+
+      &:hover {
+        color: $yellow-color;
+        transition: all 0.5s ease;
+      }
+
+      @include xl {
+        font-weight: 400;
+        line-height: 16px;
+      }
+
+      &:not(:last-child) {
+        padding-left: 1rem;
+      }
+
+      &.active {
+        color: $soft-color;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .login {
+    width: 153px;
+    height: 48px;
+    border-radius: 8px;
+    font-weight: 700;
+    line-height: 16px;
+    color: $light-color;
+    background-color: $yellow-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: $light-color;
+    margin: 0 10px 0 0;
+
+    @include xl {
+      width: 130px;
+      height: 40px;
+      font-weight: 600;
+    }
+
+    @include lg {
+      position: absolute;
+      top: 22px;
+      left: 39px;
+      z-index: 1;
+    }
+  }
+
+  .logged-in {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    @include lg {
+      position: absolute;
+      top: 33px;
+      left: 30px;
+      z-index: 1;
+    }
+
+    @include sm {
+      left: 15px;
+    }
+  }
+
+  .smallscreen {
+    display: none;
+
+    @include lg {
+      display: flex;
+    }
+
+    .links {
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .link {
+        margin: 25px;
+        font-size: 1.6rem;
+        cursor: pointer;
+        text-align: center;
+        color: $yellow-color;
+
+        &:hover {
+          color: $light-color;
+          transition: all 0.5s ease;
+        }
+      }
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100vh;
+      background: $main-color;
+      transition: 0.5s ease;
+      flex-direction: column;
+      z-index: 500000000;
+    }
+
+    .overlay-close {
+      color: rgb(255, 255, 255);
+      position: absolute;
+      font-size: 27px;
+      cursor: pointer;
+      top: 25px;
+      right: 25px;
+    }
+  }
+
+  .large-screen {
+    @include lg {
+      display: none;
+    }
+  }
+}

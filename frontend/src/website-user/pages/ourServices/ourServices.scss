@@ -1,0 +1,53 @@
+@import '../../styles/variables.scss';
+@import '../../styles/responsive.scss';
+
+.our-services {
+  margin: 80px 90px 150px 90px;
+
+  @include sm {
+    margin: 120px 20px;
+  }
+
+  .title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 46px;
+    margin-bottom: 48px;
+    text-align: center;
+    color: $yellow-color;
+
+    @include sm {
+      font-size: 32px;
+    }
+  }
+
+  .items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 38px;
+
+    .item {
+      place-self: center;
+      border: 2px solid #EAE9EE;
+      border-radius: 16px;
+      box-shadow: 0 0 4px #bdbdbd, -2px -2px 12px #ffffff;
+      position: relative;
+      min-height: 250px;
+
+      .show-details {
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 700;
+        color: $yellow-color;
+        position: absolute;
+        left: 15px;
+        bottom: 10px;
+        text-decoration: none;
+
+        &:hover {
+          color: #dac88f;
+        }
+      }
+    }
+  }
+}

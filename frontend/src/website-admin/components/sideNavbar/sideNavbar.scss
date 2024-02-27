@@ -1,0 +1,95 @@
+@import '../../styles/variables.scss';
+@import '../../styles/responsive.scss';
+
+.sideNavbar {
+  width: 100%;
+  height: 100%;
+  background-color: $white-color;
+
+  .logo {
+    padding: 19px 16px 20px 16px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 700;
+    color: #272727;
+
+    @include lg {
+      padding-left: 0;
+      padding-right: 0;
+      font-size: 18px;
+    }
+  }
+
+  .menu {
+    padding: 24px 16px;
+    border-top: 2px solid $light-gray;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 150px;
+
+    @include lg {
+      padding: 20px 14px;
+    }
+
+    .item {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: $gray-color;
+      padding: 8px 16px 8px 24px;
+      border-radius: 6px;
+      margin-bottom: 12px;
+      transition: all 0.1s ease;
+
+      @include lg {
+        padding: 5px;
+        width: fit-content;
+      }
+
+      .itemTitle {
+        font-size: 16px;
+        line-height: 19px;
+        font-weight: 500;
+        margin-right: 6px;
+
+        @include lg {
+          display: none;
+        }
+      }
+    }
+
+    .active {
+      background-color: $yellow-color;
+      color: $white-color;
+    }
+  }
+
+  .logout {
+    position: absolute;
+    margin: 24px 16px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: $gray-color;
+    padding: 8px 16px 8px 24px;
+    border-radius: 6px;
+    bottom: 0;
+
+    @include lg {
+      padding: 5px;
+      width: fit-content;
+    }
+
+    .title {
+      font-size: 16px;
+      line-height: 19px;
+      font-weight: 500;
+      margin-right: 6px;
+
+      @include lg {
+        display: none;
+      }
+    }
+  }
+}

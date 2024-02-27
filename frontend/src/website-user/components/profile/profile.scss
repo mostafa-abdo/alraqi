@@ -1,0 +1,146 @@
+@import '../../styles/variables.scss';
+@import '../../styles/responsive.scss';
+
+.profile {
+
+  .edit {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E8EDF1;
+    padding-right: 40px;
+
+    @include sm {
+      padding-right: 10px;
+    }
+
+    .first {
+      margin-top: 10px;
+    }
+
+    .edit-title {
+      font-size: 16px;
+      line-height: 19px;
+      font-weight: 500;
+      color: #9094A0;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      padding: 0 12px;
+
+
+
+      @include sm {
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 400;
+      }
+
+      &.active {
+        color: $yellow-color;
+        position: relative;
+
+        &::after {
+          position: absolute;
+          content: '';
+          height: 2px;
+          width: 115%;
+          background-color: $yellow-color;
+          bottom: -12px;
+          right: -13px;
+        }
+      }
+    }
+  }
+
+  .body {
+
+    .inputs-container {
+      @include smd {
+        width: 250px;
+      }
+    }
+
+    .label, label {
+      font-size: 12px;
+      line-height: 14px;
+      font-weight: 700;
+      color: #010101;
+      margin-bottom: 10px;
+    }
+
+    .input-container {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+
+      @include smd {
+        width: 250px;
+      }
+
+      input {
+        width: 338px;
+        height: 52px;
+        padding: 17px 16px 15px 16px;
+        border: 0;
+        outline: none;
+        border-radius: 10px;
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: 400;
+        background-color: #F4F6F9;
+        color: $main-color;
+
+        @include smd {
+          width: 250px;
+        }
+      }
+    }
+
+    .input {
+      @include smd {
+        width: 250px;
+      }
+    }
+  }
+
+  // number input
+  .react-tel-input .form-control {
+    margin-right: 75px;
+    height: 52px;
+    width: 263px;
+    padding: 0;
+    text-align: right;
+    border: none;
+    border-radius: 8px;
+    padding-right: 16px;
+    background-color: #F4F6F9;
+
+    @include smd {
+      width: 175px;
+    }
+  }
+
+  .react-tel-input .flag-dropdown {
+    border: none;
+    border-radius: 8px;
+    background-color: #F4F6F9;
+  }
+
+  .react-tel-input .selected-flag {
+    width: 60px;
+    border: none;
+    border-radius: 8px;
+    background-color: #F4F6F9;
+  }
+
+  .react-tel-input .selected-flag .flag {
+    right: 10px;
+  }
+
+  .react-tel-input .selected-flag .arrow {
+    left: -30px;
+  }
+
+  // end number input
+}

@@ -1,0 +1,520 @@
+@import '../../styles/variables.scss';
+@import '../../styles/responsive.scss';
+
+.visas-details {
+  padding-top: 10px;
+
+  @include lg {
+    padding: 80px 0;
+  }
+
+  @include smd {
+    padding: 60px 0 0 0;
+  }
+
+  @include sm {
+    padding: 40px 0 0 0;
+  }
+}
+
+.visas-step {
+  max-width: 1232px;
+  min-height: 500px;
+  padding: 40px 24px;
+  background-color: $light-color;
+  margin: auto;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    margin-bottom: 32px;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #1A202C;
+
+    @include sm {
+      font-size: 18px;
+      line-height: 16px;
+    }
+  }
+
+  .step-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    @include xxl {
+      justify-content: center;
+    }
+
+    .box {
+      max-width: 338px;
+      margin-bottom: 10px;
+
+      .title {
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 18px;
+        margin-bottom: 5px;
+        margin-right: 10px;
+
+        span {
+          font-size: 24px;
+          line-height: 28px;
+          font-weight: 700;
+          color: #C9B979;
+        }
+      }
+
+      // start input search place
+      .input-dropdown {
+        max-width: 338px;
+        height: 52px;
+        display: flex;
+        align-items: center;
+        background-color: #F4F6F9;
+        border-radius: 10px;
+        padding-right: 5px;
+
+        @include smd {
+          width: 326px;
+        }
+
+        @include sm {
+          width: 290px;
+        }
+
+        .select-input {
+          width: 332px;
+          background-color: transparent;
+          border: none;
+          height: 52px;
+          font-size: 14px !important;
+          font-weight: 500 !important;
+          line-height: 16px !important;
+          outline: 0 !important;
+          box-shadow: 0 0 0 !important;
+          color: #9094A0 !important;
+
+          @include smd {
+            width: 326px;
+          }
+
+          @include sm {
+            width: 290px;
+          }
+        }
+      }
+
+      // end input place
+
+      // start one date round
+      .oneRoundDate {
+        position: relative;
+        width: fit-content;
+        border: none;
+        display: flex;
+        align-items: center;
+        background-color: #F4F6F9;
+        width: 330px;
+        border-radius: 10px;
+        padding-right: 5px;
+
+        @include smd {
+          width: 326px !important;
+        }
+
+        @include sm {
+          width: 290px !important;
+        }
+
+        #date-input {
+          border: none;
+          outline: none;
+          margin-right: 5px;
+          font-size: 14px;
+          font-weight: 500;
+          width: 326px !important;
+          background-color: #F4F6F9;
+          border-radius: 10px;
+          height: 52px;
+
+          @include smd {
+            width: 300px !important;
+          }
+
+          @include sm {
+            width: 270px !important;
+          }
+        }
+      }
+
+      // end one round date
+    }
+
+    .radio-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+
+      .radio-box {
+        margin-top: 10px;
+
+        .title {
+          font-size: 16px;
+          line-height: 20px;
+          font-weight: 500;
+          margin-bottom: 15px;
+
+          p {
+            font-size: 14px;
+            line-height: 18px;
+            font-weight: 400;
+            color: #9094A0;
+          }
+        }
+
+        .radio-buttons {
+          display: flex;
+          gap: 20px;
+
+          .radio {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            width: 210px;
+            height: 80px;
+            padding: 0 24px;
+            border-radius: 16px;
+            box-shadow: 0 0 6px rgba($color: #000000, $alpha: 0.1);
+
+            @include xl {
+              width: 180px;
+            }
+
+            @include smd {
+              width: 200px;
+            }
+
+            @include sm {
+              width: 100px;
+            }
+
+            input[type="radio"] {
+              position: absolute;
+              opacity: 0;
+              width: 16px;
+              height: 16px;
+              right: 0;
+              display: none;
+
+              +.radio-label {
+                font-size: 16px;
+                line-height: 19px;
+                font-weight: 500;
+                color: $main-color;
+
+                &:before {
+                  content: '';
+                  background: #FFFFFF;
+                  border-radius: 100%;
+                  border: 1.5px solid $yellow-color;
+                  display: inline-block;
+                  width: 17px;
+                  height: 17px;
+                  position: relative;
+                  top: 0px;
+                  vertical-align: top;
+                  cursor: pointer;
+                  text-align: center;
+                  transition: all 250ms ease;
+                  margin-left: 6px;
+                }
+              }
+
+              &:checked {
+                +.radio-label {
+                  &:before {
+                    background-color: $yellow-color;
+                    box-shadow: inset 0 0 0 2px #FFFFFF;
+                  }
+                }
+              }
+
+              &:focus {
+                +.radio-label {
+                  &:before {
+                    outline: none;
+                    border-color: $yellow-color;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .upload_items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 34px;
+
+      @include smd {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .item {
+        max-width: 284px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .header {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          h3 {
+            font-size: 16px;
+            line-height: 16px;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: #000000;
+            text-align: center;
+            width: fit-content;
+
+            span {
+              font-size: 36px;
+              line-height: 43px;
+              font-weight: 400;
+              color: #C9B979;
+            }
+          }
+
+          p {
+            font-size: 14px;
+            line-height: 18px;
+            font-weight: 400;
+            color: #9094A0;
+            margin-bottom: 16px;
+          }
+        }
+
+        .upload_file {
+          width: 247px;
+          height: 269px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          background-color: #FAFCFE;
+          background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='13' ry='13' stroke='%23E0E5F2FF' stroke-width='3' stroke-dasharray='14' stroke-dashoffset='9' stroke-linecap='round'/%3e%3c/svg%3e");
+          border-radius: 13px;
+          cursor: pointer;
+
+          h2 {
+            font-size: 20px;
+            line-height: 32px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: $yellow-color;
+          }
+
+          p {
+            font-size: 12px;
+            line-height: 20px;
+            font-weight: 500;
+            color: #8F9BBA;
+          }
+        }
+      }
+    }
+
+    .step4-inputs {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+
+      .input {
+        width: 333px;
+
+        @include sm {
+          width: 270px;
+        }
+
+        input {
+          font-size: 14px;
+          font-weight: 500;
+          width: 100%;
+          padding-left: 5px;
+          padding-right: 10px;
+
+          &::placeholder {
+            color: #9094A0;
+            font-size: 14px;
+            font-weight: 500;
+          }
+        }
+      }
+
+      // start phone input
+      .react-tel-input .form-control {
+        margin-right: 75px;
+        height: 52px;
+        width: 260px;
+        padding: 0;
+        text-align: right;
+        border: none;
+        border-radius: 8px;
+        padding-right: 16px;
+        background-color: #F4F6F9;
+
+        @include sm {
+          width: 196px;
+        }
+      }
+
+      .react-tel-input .flag-dropdown {
+        border: none;
+        border-radius: 8px;
+        background-color: #F4F6F9;
+      }
+
+      .react-tel-input .selected-flag {
+        width: 60px;
+        border: none;
+        border-radius: 8px;
+        background-color: #F4F6F9;
+      }
+
+      .react-tel-input .selected-flag .flag {
+        right: 10px;
+      }
+
+      .react-tel-input .selected-flag .arrow {
+        left: -30px;
+      }
+      // end phone input
+    }
+  }
+
+  .stepper-btn {
+    margin-top: 40px;
+    width: 272px;
+    height: 52px;
+    background-color: $yellow-color;
+    color: $light-color;
+    border-radius: 8px;
+    border: 0;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700;
+    cursor: pointer;
+
+    @include md {
+      height: 50px;
+    }
+
+    @include sm {
+      width: 250px;
+    }
+  }
+
+  .alert-container {
+    position: relative;
+
+    .success-alert {
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      background-color: $light-color;
+      box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.3);
+      border-radius: 24px;
+      width: 500px;
+      padding: 35px 30px;
+      z-index: 100;
+
+      @include md {
+        width: 420px;
+        right: -25%;
+        top: -100%;
+      }
+
+      @include sm {
+        width: 270px;
+        right: -4%;
+        padding: 14px 8px;
+      }
+
+      .success-container {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 30px;
+
+        .close-btn {
+          position: absolute;
+          left: 0;
+          top: 0;
+          cursor: pointer;
+        }
+
+        h2 {
+          font-size: 22px;
+          line-height: 26px;
+          font-weight: 700;
+          color: $yellow-color;
+          margin: 0;
+
+          @include md {
+            font-size: 20px;
+          }
+        }
+
+        p {
+          font-size: 18px;
+          line-height: 28px;
+          font-weight: 500;
+          color: #4A4A4A;
+
+          @include md {
+            font-size: 16px;
+          }
+        }
+
+        .return-btn {
+          width: 250px;
+          height: 50px;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: $yellow-color;
+          border-radius: 8px;
+          color: $light-color;
+          font-size: 16px;
+          line-height: 24px;
+          font-weight: 700;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,159 @@
+@import '../../styles/variables.scss';
+@import '../../styles/responsive.scss';
+
+.registration {
+  width: 100%;
+  margin: 88px auto;
+  display: flex;
+  justify-content: center;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 443px;
+    padding: 44px 34px 0px 34px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.3);
+
+    @include md {
+      width: 95%;
+    }
+
+    h1 {
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: 500;
+      color: $main-color;
+      margin-bottom: 8px;
+
+      @include sm {
+        font-size: 19px;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 16px;
+      font-weight: 400;
+      color: #8B8D97;
+      margin-bottom: 60px;
+    }
+
+    .fields {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .form-group {
+        display: flex;
+        align-items: center;
+        width: 375px;
+        height: 52px;
+        border-radius: 8px;
+        padding-right: 16px;
+        background-color: #F4F6F9;
+
+        @include sm {
+          width: 320px;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 30px;
+        }
+
+        .form-control {
+          width: 93%;
+          height: 51px;
+          border: none;
+          border-radius: 8px;
+          padding-right: 16px;
+          background-color: #F4F6F9;
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+
+      // number input
+      #phone {
+        @include sm {
+          width: 320px !important;
+        }
+      }
+
+      .react-tel-input .form-control {
+        margin-right: 75px;
+        height: 52px;
+        padding: 0;
+        text-align: right;
+        border: none;
+        border-radius: 8px;
+        padding-right: 16px;
+        background-color: #F4F6F9;
+
+        @include sm {
+          width: 245px !important;
+        }
+      }
+
+      .react-tel-input .flag-dropdown {
+        border: none;
+        border-radius: 8px;
+        background-color: #F4F6F9;
+      }
+
+      .react-tel-input .selected-flag {
+        width: 60px;
+        border: none;
+        border-radius: 8px;
+        background-color: #F4F6F9;
+      }
+
+      .react-tel-input .selected-flag .flag {
+        right: 10px;
+      }
+
+      .react-tel-input .selected-flag .arrow {
+        left: -30px;
+      }
+
+      // end number input
+
+      .btn {
+        width: 375px;
+        height: 52px;
+        border-radius: 12px;
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 400;
+        color: $light-color;
+        margin-top: 15px;
+
+        @include sm {
+          width: 320px;
+        }
+      }
+    }
+
+    .back_login {
+      display: flex;
+      font-size: 14px;
+      line-height: 16px;
+      font-weight: 400;
+      margin-top: 15px;
+
+      p {
+        color: #8B8D97;
+      }
+
+      .log {
+        color: $yellow-color;
+        cursor: pointer;
+        text-decoration: none;
+        height: fit-content;
+      }
+    }
+  }
+}

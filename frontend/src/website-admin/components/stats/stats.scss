@@ -1,0 +1,120 @@
+@import '../../styles/variables.scss';
+@import '../../styles/responsive.scss';
+
+.stats {
+  width: 480px;
+  height: fit-content;
+  padding: 11px 15px;
+  border-radius: 12px;
+  background-color: $white-color;
+
+  @include xl {
+    width: 400px;
+  }
+  @include lg {
+    width: 100%;
+  }
+
+  .stats-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .title {
+      display: flex;
+      align-items: center;
+
+      span {
+        margin-right: 16px;
+        font-size: 12px;
+        line-height: 14px;
+        font-weight: 400;
+        color: $dark-color;
+      }
+    }
+
+    .dropdown-select {
+      width: 90px;
+
+      .dropdown {
+        width: 100%;
+        background-color: transparent;
+        text-align: right;
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 400;
+        height: 40px;
+        position: relative;
+        color: #BEC0CA;
+        user-select: none;
+        margin-top: 10px;
+
+        .dropdown-btn {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          color: #BEC0CA;
+          cursor: pointer;
+        }
+
+        .dropdown-content {
+          position: absolute;
+          top: 100%;
+          padding: 0px;
+          background-color: #fff;
+          font-size: 13px;
+          line-height: 11px;
+          font-weight: 400;
+          color: #000;
+          width: 100%;
+          right: 0;
+          z-index: 10;
+          height: 100px;
+          overflow-y: scroll;
+          box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.5);
+        }
+
+        .dropdown-item {
+          padding: 10px;
+          cursor: pointer;
+          transition: all 0.2s;
+
+          &:hover {
+            background-color: #c5c5c7;
+          }
+        }
+      }
+    }
+  }
+
+  .stats-numbers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+
+    .stats-item {
+      text-align: right;
+
+      .title {
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 400;
+
+        @include md {
+          font-size: 12px;
+        }
+      }
+
+      .number {
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 500;
+        margin-top: 8px;
+        @include sm {
+          font-size: 19px;
+        }
+      }
+    }
+  }
+}

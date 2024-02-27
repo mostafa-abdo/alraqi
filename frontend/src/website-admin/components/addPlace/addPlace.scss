@@ -1,0 +1,106 @@
+@import '../../styles/variables.scss';
+@import '../../styles/responsive.scss';
+
+.add-place {
+  padding-top: 24px;
+
+  .title {
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 500;
+    color: #010101;
+    margin-bottom: 16px;
+
+    @include smd {
+      font-size: 15px;
+    }
+  }
+
+  .places {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    .place {
+      position: relative;
+      padding: 8px 12px;
+      background-color: $light-gray;
+      border-radius: 4px;
+      font-size: 14px;
+      line-height: 16px;
+      font-weight: 500;
+      color: #9094A0;
+
+      &:hover .close-btn {
+        display: block;
+      }
+
+      .close-btn {
+        position: absolute;
+        top: -4px;
+        left: -4px;
+        width: 13px;
+        height: 13px;
+        display: none;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .addNew-place {
+    position: relative;
+    max-width: 338px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+    gap: 8px;
+
+    label {
+      font-size: 16px;
+      line-height: 19px;
+      font-weight: 500;
+      color: #010101;
+
+      @include smd {
+        font-size: 15px;
+      }
+    }
+
+    input {
+      padding: 21px 16px 20px 16px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      background-color: $light-gray;
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: 400;
+      color: $dark-color;
+
+      @include smd {
+        padding: 14px;
+      }
+    }
+
+    button {
+      position: absolute;
+      left: 0;
+      bottom: -60px;
+      width: 112px;
+      padding: 12px 35px;
+      font-size: 16px;
+      line-height: 19px;
+      font-weight: 500;
+      color: $white-color;
+      border: 0;
+      outline: none;
+      cursor: pointer;
+      border-radius: 6px;
+      background-color: $yellow-color;
+
+      @include smd {
+        padding: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,121 @@
+@import '../../styles/variables.scss';
+@import '../../styles/responsive.scss';
+
+.travel-partners {
+  background-color: $light-gray;
+
+  .content {
+    padding: 24px 24px 13px 24px;
+
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+
+      .discount {
+        width: 480px;
+        padding: 11px 15px;
+        border-radius: 12px;
+        background-color: $white-color;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include xl {
+          width: 400px;
+        }
+
+        @include lg {
+          width: 100%;
+        }
+
+        .title {
+          display: flex;
+          align-items: center;
+
+          span {
+            margin-right: 16px;
+            font-size: 12px;
+            line-height: 14px;
+            font-weight: 400;
+            color: $dark-color;
+          }
+        }
+
+        .discount-input {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+
+          @include sm {
+            flex-direction: column;
+          }
+
+          input {
+            width: 338px;
+            height: 52px;
+            padding: 17px 16px 15px 16px;
+            border: 0;
+            outline: none;
+            border-radius: 11px;
+            font-size: 12px;
+            line-height: 16px;
+            font-weight: 400;
+            margin-top: 20px;
+            background-color: $light-gray;
+
+            @include sm {
+              width: 100%;
+            }
+          }
+
+          button {
+            width: 182px;
+            height: 52px;
+            background-color: #CCCCCC;
+            color: $white-color;
+            border: 0;
+            border-radius: 11px;
+            font-size: 18px;
+            line-height: 21px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 20px;
+
+            @include md {
+              padding: 12px 10px;
+              font-size: 17px;
+              font-weight: 600;
+            }
+
+            @include sm {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    .table {
+      margin-top: 24px;
+
+      .head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .title {
+          font-size: 24px;
+          line-height: 29px;
+          font-weight: 500;
+          color: $dark-color;
+
+          @include md {
+            font-size: 19px;
+          }
+        }
+      }
+    }
+  }
+}

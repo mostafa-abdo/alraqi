@@ -1,0 +1,167 @@
+@import '../../styles/variables.scss';
+@import '../../styles/responsive.scss';
+
+.join_container {
+
+  .join_us {
+    background-color: #FCFAF5;
+    padding: 72px 104px;
+
+    @include md {
+      padding: 30px 0;
+    }
+
+
+    .join_title {
+      font-size: 36px;
+      line-height: 46px;
+      font-weight: 700;
+      color: $yellow-color;
+      text-align: center;
+      margin-bottom: 48px;
+
+      @include md {
+        font-size: 30px;
+        line-height: 39px;
+      }
+
+      @include sm {
+        font-size: 19px;
+        line-height: 19px;
+      }
+    }
+
+    .items {
+      display: flex;
+      gap: 48px;
+
+      @include lg {
+        gap: 10px;
+        padding-right: 5px;
+        padding-left: 5px;
+      }
+
+      @include smd {
+        flex-wrap: wrap;
+      }
+    }
+  }
+
+  .special {
+    padding: 50px 104px;
+
+    @include lg {
+      padding: 30px 20px;
+    }
+
+    @include md {
+      padding: 30px 10px;
+    }
+
+    @include sm {
+      padding: 30px 0;
+    }
+
+    .special_title {
+      font-size: 36px;
+      line-height: 46px;
+      font-weight: 700;
+      color: $yellow-color;
+      text-align: center;
+      margin-bottom: 48px;
+
+      @include md {
+        font-size: 30px;
+        line-height: 39px;
+      }
+
+      @include sm {
+        font-size: 19px;
+        line-height: 19px;
+      }
+    }
+
+    .items {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 38px;
+
+      @include lg {
+        grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+        gap: 15px;
+      }
+
+      @include md {
+        grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+        gap: 15px;
+      }
+
+      @include sm {
+        grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+        gap: 5px;
+      }
+
+      .item {
+        place-self: center;
+        padding: 30px;
+        max-width: 360px;
+        height: 296px;
+        border-radius: 16px;
+        box-shadow: 0 0 10px 2px rgb(216, 215, 215);
+
+        @include sm {
+          padding: 10px 5px 5px 5px;
+          height: fit-content;
+          max-width: 175px;
+          text-align: center;
+        }
+
+        h2 {
+          font-size: 19px;
+          line-height: 30px;
+          font-weight: 700;
+          color: $main-color;
+          margin-top: 19px;
+          margin-bottom: 19px;
+          position: relative;
+
+          @include sm {
+            font-size: 12px;
+            line-height: 14px;
+            margin-bottom: 10px;
+          }
+
+          &::after {
+            position: absolute;
+            content: "";
+            bottom: -20px;
+            right: 0;
+            width: 40px;
+            height: 2px;
+            background-color: #D4B32E;
+
+            @include sm {
+              display: none;
+            }
+          }
+        }
+
+        p {
+          font-size: 16px;
+          line-height: 30px;
+          font-weight: 400;
+          color: $main-color;
+          margin-top: 38px;
+          margin-bottom: 19px;
+
+          @include sm {
+            font-size: 10px;
+            line-height: 16px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+  }
+}

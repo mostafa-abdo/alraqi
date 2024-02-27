@@ -1,0 +1,330 @@
+@import '../../styles/variables.scss';
+@import '../../styles/responsive.scss';
+
+
+.heroSection {
+    width: 100%;
+    position: relative;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-image: url('/hero-bg.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 250px;
+    padding: 20px;
+
+    .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        margin-top: 60px;
+        padding: 20px 0;
+
+        .booking-container {
+            width: 100%;
+            display: flex;
+            max-width: 550px;
+            flex-direction: column;
+            overflow: hidden;
+            -webkit-border-radius: 15px;
+            -moz-border-radius: 15px;
+            -ms-border-radius: 15px;
+            -o-border-radius: 15px;
+            border-radius: 15px;
+
+    
+            .booking-tabs {
+                display: flex;
+                align-items: right;
+                gap: 0px;
+                background-color: #ffffff20;
+                font-size: clamp(16px, 1.5vw, 22px);
+        
+        
+                .tab {
+                    text-decoration: none;
+                    color: #fff;
+                    display: flex;
+                    flex-direction: row;
+                    gap: 3px;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 15px clamp(5px, 1.5vw, 15px);
+                    cursor: pointer;
+                }
+        
+                .tab.active {
+                    background-color: #ffffff;
+                    color: $yellow-color;
+                    font-weight: 500;
+        
+                    path {
+                        fill: $yellow-color;
+                    }
+                }
+        
+            }
+        
+            .booking-form {
+                background-color: #fff;
+                min-height: 250px;
+                height: auto;
+                padding: 15px;
+                
+                .inputs {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    width: 100%;
+                    
+                    .input{
+                        font-size: clamp(16px, 1.5vw, 18px);
+                        width: 100%;
+                        height: 45px;
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 0 5px;
+                        gap: 5px;
+                        background-color: #F4F6F9;
+                        flex-direction: row;
+                        border: 1px solid #00000020;
+                        // overflow: hidden;
+                        -webkit-border-radius:5px;
+                        -moz-border-radius:5px;
+                        -ms-border-radius:5px;
+                        -o-border-radius:5px;
+                        border-radius:5px;
+                        
+
+
+                        i{   
+                            color: #00000070;
+                        }
+
+                        input {
+                            width: 100%;
+                            height: 100%;
+                            border: none;
+                            outline: none;
+                            padding: 0;
+                            font-size: clamp(14px, 1.5vw, 16px);
+                            font-weight: 400;
+                            background-color: unset;
+                        }
+
+                        select {
+                            width: 100%;
+                            height: 100%;
+                            border: none;
+                            outline: none;
+                            padding: 0;
+                            font-size: clamp(14px, 1.5vw, 16px);
+                            background-color: unset;
+                            font-weight: 400;
+                        }
+
+                        .react-datepicker-wrapper {
+                            width: 100%;
+                            height: 100%;
+                        }
+
+                        .react-datepicker__input-container {
+                            width: 100%;
+                            height: 100%;
+                        }
+
+                        .datepicker {
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 0;
+                            -webkit-border-radius: 0;
+                            -moz-border-radius: 0;
+                            -ms-border-radius: 0;
+                            -o-border-radius: 0;
+                        }
+
+                    }
+
+                    .inline-inputs {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        gap: 10px;
+                        min-height: 10px;
+                        height: auto;
+
+                        .input {
+                            width: 50%;
+                        }
+
+                        .check-input{
+                            width: 50%;
+                            display: flex;
+                            flex-direction: row-reverse;
+                        }
+
+                    }
+
+                    .inline-inputs.expandable{
+                        overflow: hidden;
+                        height: 0;
+                        
+                        .input {
+                            height: 0;
+                            transition: height 0.3s linear;
+                            -webkit-transition: height 0.3s linear;
+                            -moz-transition: height 0.3s linear;
+                            -ms-transition: height 0.3s linear;
+                            -o-transition: height 0.3s linear;
+}
+                        transition: height 0.2s linear;
+                        -webkit-transition: height 0.2s linear;
+                        -moz-transition: height 0.2s linear;
+                        -ms-transition: height 0.2s linear;
+                        -o-transition: height 0.2s linear;
+                    }
+
+                    .inline-inputs.expanded {
+                        height: 45px;
+                        
+                        .input {
+                            height: 45px;
+                            
+                        }
+                    }
+
+                    .submit-container {
+                        display: flex;
+                        justify-content: center;
+
+                        button {
+                            width: 100%;
+                            background-color: $yellow-color;
+                            color: #fff;
+                            height: 45px;
+                            border-radius: 5px;
+                            font-size: clamp(16px, 1.5vw, 18px);
+                        }
+                    }
+
+                    .items-container {
+
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 10px;
+                        justify-content: center;
+                        padding: 5px 0;
+                        
+                        .item {
+
+
+                            display: flex;
+                            flex-direction: column;
+                            gap: 5px;
+                            border: 1px solid #00000020;
+                            padding: 10px;
+                            border-radius: 5px;
+                            min-width: 250px;
+                            font-size: clamp(14px, 1.5vw, 16px);
+                            cursor: pointer;
+
+                            .info-container {
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                justify-content: space-between;
+
+                                .img{
+                                    height: 40px;
+                                    img {
+                                        height: 100%;
+                                    }
+                                }
+
+                                .info {
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 5px;
+
+                                    .num {
+                                        display: flex;
+                                        flex-direction: row-reverse;
+                                        gap: 5px;
+                                        align-items: center;
+                                        font-weight: 500;
+                                        font-size: clamp(16px, 1.5vw, 18px);
+                                    }
+                                }
+                            }
+
+                            .title {
+                                .category {
+                                    font-weight: 600;
+                                }
+                            }
+                        }
+
+                        .item.selected {
+                            outline: 2px solid $yellow-color;
+                        }
+
+                        .item:active {
+                            outline: 2px solid $yellow-color;
+                        }
+
+                        .item:hover {
+                            outline: 2px solid $soft-color;
+                        }
+                    }
+                }
+            }
+        }
+    
+        .desc {
+            font-size: 20px;
+            font-weight: 500;
+            color: #fff;
+            text-align: center;
+            line-height: 30px;
+        }
+    }
+
+}
+
+
+@media screen and (min-width: 1024px) {
+    .heroSection {
+        .container{
+            flex-direction: row;
+            gap: clamp(100px, 10vw, 200px);
+
+            .desc {
+                max-width: 500px;
+                font-size: 26px;
+            }
+        }
+
+        
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .heroSection {
+        .container{
+            .items-container {
+                .item {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

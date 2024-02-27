@@ -1,0 +1,36 @@
+@import '../../styles/variables.scss';
+
+.prices {
+  padding-bottom: 64px;
+  margin: auto;
+  text-align: left;
+
+  .text {
+    text-align: center;
+    margin-top: 64px;
+    margin-bottom: 40px;
+
+    h1 {
+      font-size: 36px;
+      line-height: 46px;
+      font-weight: 700;
+      color: $yellow-color;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 30px;
+      font-weight: 400;
+      color: #8A8A8A;
+      margin-top: 16px;
+    }
+  }
+
+  .text_footer {
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #8A8A8A;
+    margin-top: 10px;
+  }
+}

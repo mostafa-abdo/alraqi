@@ -1,0 +1,145 @@
+@import '../../styles/variables.scss';
+@import '../../styles/responsive.scss';
+
+.stepper {
+  position: absolute;
+  background-color: $white-color;
+  border-radius: 20px;
+  padding: 56px 72px 40px 72px;
+  box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.3);
+  width: fit-content;
+  margin: auto;
+  top: 90px;
+  left: 0;
+  right: 30px;
+  z-index: 1000;
+
+  @include lg {
+    right: 20px;
+    left: 20px;
+    padding: 56px 30px;
+  }
+
+  .close {
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .steps-container {
+    position: relative;
+    max-width: 520px;
+    margin: auto;
+    margin-bottom: 40px;
+
+    @include md {
+      max-width: 400px;
+    }
+
+    @include smd {
+      max-width: 220px;
+    }
+  }
+
+  .progress-line1 {
+    position: absolute;
+    height: 6px;
+    background-color: #EFF0F6;
+    width: 98px;
+    top: 50%;
+    right: 50px;
+    z-index: -1;
+    transition: all 0.25s ease;
+    border-radius: 40px;
+
+    @include md {
+      right: 40px;
+      width: 77px;
+    }
+
+    @include smd {
+      right: 26px;
+      width: 35px;
+    }
+  }
+
+  .progress-line2 {
+    position: absolute;
+    height: 6px;
+    background-color: #EFF0F6;
+    width: 98px;
+    top: 50%;
+    left: 211px;
+    z-index: -1;
+    transition: all 0.25s ease;
+    border-radius: 40px;
+
+    @include md {
+      left: 160px;
+      width: 77px;
+    }
+
+    @include smd {
+      right: 92px;
+      width: 35px;
+    }
+  }
+
+  .progress-line3 {
+    position: absolute;
+    height: 6px;
+    background-color: #EFF0F6;
+    width: 98px;
+    top: 50%;
+    left: 48px;
+    z-index: -1;
+    transition: all 0.25s ease;
+    border-radius: 40px;
+
+    @include md {
+      left: 40px;
+      width: 75px;
+    }
+
+    @include smd {
+      left: 25px;
+      width: 35px;
+    }
+  }
+
+  .progress-line1.proActive,
+  .progress-line2.proActive,
+  .progress-line3.proActive {
+    background-color: $yellow-color;
+    z-index: 111;
+  }
+
+  .steps-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .steps {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: #EFF0F6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    cursor: pointer;
+
+    @include smd {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .steps.active {
+    background-color: $yellow-color;
+  }
+}

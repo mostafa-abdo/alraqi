@@ -1,0 +1,160 @@
+@import '../../styles/variables.scss';
+@import '../../styles/responsive.scss';
+
+.step {
+  max-width: 754px;
+  padding: 40px 24px;
+  background-color: $white-color;
+  box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.3);
+  margin: auto;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    margin-bottom: 32px;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #1A202C;
+
+    @include sm {
+      font-size: 18px;
+      line-height: 16px;
+    }
+  }
+
+  .step-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .step-input {
+      width: 338px;
+      display: flex;
+      flex-direction: column;
+
+      @include lg {
+        width: 255px;
+        gap: 5px;
+      }
+
+      @include md {
+        width: 100%;
+        gap: 5px;
+      }
+
+      label {
+        font-size: 12px;
+        line-height: 14px;
+        font-weight: 700;
+        color: #010101;
+        margin-bottom: 10px;
+
+        @include sm {
+          font-weight: 500;
+          line-height: 12px;
+        }
+      }
+
+      input {
+        border: none;
+        outline: none;
+        background-color: #F4F6F9;
+        padding: 21px 16px 20px 16px;
+        border-radius: 10px;
+
+        @include smd {
+          padding: 13px 10px;
+          font-weight: 200;
+          font-size: 12px;
+          line-height: 13px;
+        }
+      }
+    }
+
+    // phone input
+    .phone-input {
+      width: 338px;
+
+      @include lg {
+        width: 255px;
+        gap: 5px;
+      }
+
+      @include md {
+        width: 100%;
+        gap: 5px;
+      }
+
+      div {
+        display: flex;
+
+        .flag {
+          width: 75px;
+          background-color: #F4F6F9;
+          border-radius: 10px;
+          margin-left: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 5px;
+
+          @include lg {
+            padding: 5px;
+          }
+        }
+
+        input {
+          width: 255px;
+
+          @include md {
+            width: 100%;
+            gap: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  .stepper-btn {
+    margin-top: 40px;
+    width: 272px;
+    height: 52px;
+    background-color: $yellow-color;
+    color: $white-color;
+    border-radius: 8px;
+    border: 0;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700;
+    cursor: pointer;
+
+    @include md {
+      width: 100%;
+      height: 40px;
+    }
+  }
+
+  .notes {
+
+    h3 {
+      font-size: 12px;
+      line-height: 15px;
+      font-weight: 700;
+      color: #010101;
+    }
+
+    p {
+      font-size: 12px;
+      line-height: 18px;
+      font-weight: 400;
+      color: $dark-color;
+      border-radius: 10px;
+      margin-top: 10px;
+      padding: 21px 16px 20px 16px;
+      background-color: $light-gray;
+    }
+  }
+}

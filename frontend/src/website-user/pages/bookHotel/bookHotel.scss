@@ -1,0 +1,181 @@
+@import '../../styles/variables.scss';
+@import '../../styles/responsive.scss';
+
+.book-hotel {
+
+  .container {
+    max-width: 1232px;
+    margin: 80px auto;
+    display: flex;
+    flex-direction: column;
+
+
+    .info_div {
+      width: 100%;
+      padding: 45px 25px;
+      border-radius: 20px;
+      background: #ffffff;
+      box-shadow: 0px 0px 0px;
+
+      &:nth-child(2) {
+        box-shadow: 0 0 0;
+      }
+
+      h3 {
+        font-size: 24px;
+        line-height: 30px;
+        font-weight: 700;
+        margin-bottom: 32px;
+        color: #1A202C;
+        text-align: center;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+
+    .customer_info {
+
+      .inputs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+
+        .input {
+          width: 333px;
+
+          @include sm {
+            width: 270px;
+          }
+
+          input {
+            font-size: 13px;
+            padding-left: 0;
+
+            &::placeholder {
+              color: #9094A0;
+            }
+
+            width: 100%;
+          }
+
+          .ant-input-number {
+            @include sm {
+              max-width: 270px;
+            }
+          }
+        }
+
+        // start phone input
+        .react-tel-input .form-control {
+          margin-right: 75px;
+          height: 52px;
+          width: 260px;
+          padding: 0;
+          text-align: right;
+          border: none;
+          border-radius: 8px;
+          padding-right: 16px;
+          background-color: #F4F6F9;
+
+          @include sm {
+            width: 196px;
+          }
+        }
+
+        .react-tel-input .flag-dropdown {
+          border: none;
+          border-radius: 8px;
+          background-color: #F4F6F9;
+        }
+
+        .react-tel-input .selected-flag {
+          width: 60px;
+          border: none;
+          border-radius: 8px;
+          background-color: #F4F6F9;
+        }
+
+        .react-tel-input .selected-flag .flag {
+          right: 10px;
+        }
+
+        .react-tel-input .selected-flag .arrow {
+          left: -30px;
+        }
+
+        // end phone input
+
+        // start input search
+        .dropdown-box {
+          .title {
+            font-size: 15px;
+            line-height: 18px;
+            font-weight: 700;
+            color: #010101;
+
+            span {
+              font-size: 24px;
+              line-height: 28px;
+              font-weight: 700;
+              color: #C9B979;
+            }
+          }
+
+          .input-dropdown {
+            max-width: 333px;
+            height: 52px;
+            background-color: #F4F6F9;
+            border-radius: 10px;
+            margin-top: 10px;
+
+            @include sm {
+              width: 270px;
+            }
+
+            .select-input {
+              width: 333px;
+              background-color: #F4F6F9;
+              border: none;
+              padding: 0px 20px 0px 10px;
+              border-radius: 10px;
+              height: 52px;
+              z-index: 10;
+              outline: 0 !important;
+              box-shadow: 0 0 0 !important;
+              color: #9094A0 !important;
+              z-index: 1;
+
+              @include sm {
+                width: 100%;
+              }
+
+              input {
+                width: 100%;
+              }
+            }
+          }
+        }
+        //end dropdown search
+      }
+    }
+
+    #date-input {
+      width: 330px;
+
+      @include sm {
+        width: 270px;
+      }
+    }
+
+    .btn {
+      width: 272px;
+      padding: 13px 0;
+      font-size: 14px;
+      line-height: 24px;
+      font-weight: 700;
+      margin-right: 25px;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+@import '../../styles/variables.scss';
+@import '../../styles/responsive.scss';
+
+.contactUs {
+  .body {
+    display: flex;
+    flex-direction: column;
+    
+    .input-container {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+
+      label {
+        font-size: 12px;
+        line-height: 14px;
+        font-weight: 700;
+        color: #010101;
+      }
+
+      .save-btn {
+        width: 112px;
+        height: 43px;
+        border-radius: 6px;
+        color: $white-color;
+        background-color: $yellow-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 700;
+        cursor: pointer;
+  
+        @include sm {
+          height: 36px;
+          line-height: 18px;
+          font-weight: 500;
+        }
+      }
+
+      input {
+        width: 338px;
+        height: 52px;
+        padding: 17px 16px 15px 16px;
+        border: 0;
+        outline: none;
+        border-radius: 10px;
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: 400;
+        background-color: $light-gray;
+        margin-top: 10px;
+        color: $dark-color;
+        text-align: right;
+
+        @include md {
+          width: 100%;
+          height: 40px;
+        }
+      }
+    }
+  }
+}

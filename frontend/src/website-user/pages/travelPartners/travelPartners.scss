@@ -1,0 +1,159 @@
+@import '../../styles/variables.scss';
+@import '../../styles/responsive.scss';
+
+.travel_partners {
+
+  .partner_hero {
+    background-image:
+    linear-gradient( to top, rgba(158, 153, 153, 0.2), rgba(0, 0, 0, 0.8)),
+    url('/bg-mobile.jpg');  
+  }
+
+  .work_features {
+    padding: 72px 74px;
+    background-color: #FCFAF5;
+
+    @include xl {
+      padding: 30px 35px;
+    }
+
+    @include lg {
+      padding: 30px 25px;
+    }
+
+    @include md {
+      padding: 30px 15px;
+    }
+
+    .title {
+      margin-bottom: 48px;
+      font-size: 36px;
+      line-height: 46px;
+      font-weight: 700;
+      color: $yellow-color;
+      text-align: center;
+
+      @include md {
+        font-size: 26px;
+        line-height: 25px;
+      }
+
+      @include sm {
+        font-size: 20px;
+        line-height: 19px;
+      }
+    }
+
+    .feature {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 200px;
+
+      &:not(:last-child) {
+        margin-bottom: 80px;
+      }
+
+      @include xxl {
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      @include smd {
+        flex-direction: column;
+
+        &:nth-child(odd) {
+          flex-direction: column-reverse;
+        }
+      }
+
+      .text {
+        max-width: 500px;
+
+        @include lg {
+          max-width: 300px;
+        }
+
+        @include md {
+          max-width: 300px;
+        }
+
+        h2 {
+          font-size: 78px;
+          line-height: 117px;
+          font-weight: 900;
+          color: $yellow-color;
+
+          @include md {
+            font-size: 42px;
+            line-height: 55px;
+            font-weight: 800;
+            margin: 0;
+          }
+        }
+
+        h3 {
+          font-size: 24px;
+          line-height: 28px;
+          font-weight: 700;
+          color: $main-color;
+
+          @include xl {
+            font-size: 22px;
+            line-height: 25px;
+          }
+
+          @include md {
+            font-size: 19px;
+            line-height: 17px;
+            margin-bottom: 10px;
+          }
+        }
+
+        p {
+          font-size: 16px;
+          line-height: 30px;
+          font-weight: 400;
+          color: #464C63;
+
+          @include md {
+            font-size: 15px;
+            line-height: 20px;
+          }
+
+          @include md {
+            font-size: 12px;
+            line-height: 16px;
+          }
+        }
+      }
+
+      .image {
+        max-width: 550px;
+
+        @include lg {
+          max-width: 360px;
+        }
+
+        @include md {
+          max-width: 260px;
+        }
+
+        img {
+          width: 100%;
+
+          @include lg {
+            height: 330px;
+            width: 360px;
+          }
+
+          @include md {
+            height: 230px;
+            width: 260px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+@import '../../styles/variables.scss';
+@import '../../styles/responsive.scss';
+
+.bookings {
+  background-color: $light-gray;
+
+  .content {
+    padding: 24px 24px 13px 24px;
+
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .bookingsTable {
+      margin-top: 24px;
+
+      .head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .title {
+          font-size: 24px;
+          line-height: 29px;
+          font-weight: 500;
+          color: $dark-color;
+
+          @include md {
+            font-size: 19px;
+          }
+        }
+
+        .actions {
+          position: relative;
+          display: flex;
+          align-items: center;
+
+          .filter {
+
+            background-color: $white-color;
+            padding: 12px 16px;
+            border-radius: 4px;
+            border: 1px solid $dark-color;
+            height: 42px;
+            cursor: pointer;
+
+            @include sm {
+              padding: 8px 10px;
+              height: 35px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

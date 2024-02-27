@@ -1,0 +1,36 @@
+@import '../../styles/responsive.scss';
+
+.policy {
+
+  .container {
+    max-width: 1232px;
+    margin: 94px auto;
+    padding: 0px 40px;
+
+    h1 {
+      font-size: 36px;
+      line-height: 46px;
+      font-weight: 700;
+      color: #BBA664;
+      margin-bottom: 40px;
+      text-align: center;
+
+      @include md {
+        font-size: 16px;
+      }
+
+    }
+
+    p {
+      font-size: 28px;
+      line-height: 80px;
+      font-weight: 500;
+      color: #718096;
+
+      @include md {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+}
